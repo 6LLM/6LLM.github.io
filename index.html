@@ -363,7 +363,7 @@
 <p>&#x1F310; <a href="https://www.codewithgpu.com/i/6llm/NLG-Chatbot/NLG-Chatbot" target="_blank">AutoDL &#x955C;&#x50CF;</a> &#x4E2D; <code>v11</code> &#x7248;&#x672C;&#x6240;&#x4F7F;&#x7528;&#x4EE3;&#x7801;&#x5DF2;&#x66F4;&#x65B0;&#x81F3;&#x672C;&#x9879;&#x76EE; <code>v0.2.7</code> &#x7248;&#x672C;&#x3002;</p>
 <p>&#x1F433; <a href="registry.cn-beijing.aliyuncs.com/chatchat/chatchat:0.2.6">Docker &#x955C;&#x50CF;</a> &#x5DF2;&#x7ECF;&#x66F4;&#x65B0;&#x5230; <code>0.2.7</code> &#x7248;&#x672C;&#x3002;</p>
 <p>&#x1F332; &#x4E00;&#x884C;&#x547D;&#x4EE4;&#x8FD0;&#x884C; Docker &#xFF1A;</p>
-<pre><code class="lang-shell">docker run -d --gpus all -p 80:8501 registry.cn-beijing.aliyuncs.com/chatchat/chatchat:0.2.7
+<pre><code class="lang-shell">docker run -d --gpus all -p 80:8501 registry.cn-beijing.aliyuncs.com/chatchat/nlgchat:0.2.7
 </code></pre>
 <p>&#x1F9E9; &#x672C;&#x9879;&#x76EE;&#x6709;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5B8C;&#x6574;&#x7684;<a href="https://github.com/6llm/NLG-Chatbot/wiki/" target="_blank">Wiki</a> &#xFF0C; README&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4ECB;&#x7ECD;&#xFF0C;<strong>&#x4EC5;&#x4EC5;&#x662F;&#x5165;&#x95E8;&#x6559;&#x7A0B;&#xFF0C;&#x80FD;&#x591F;&#x57FA;&#x7840;&#x8FD0;&#x884C;</strong>&#x3002; &#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x66F4;&#x6DF1;&#x5165;&#x7684;&#x4E86;&#x89E3;&#x672C;&#x9879;&#x76EE;&#xFF0C;&#x6216;&#x8005;&#x60F3;&#x5BF9;&#x672C;&#x9879;&#x76EE;&#x505A;&#x51FA;&#x8D21;&#x732E;&#x3002;&#x8BF7;&#x79FB;&#x6B65; <a href="https://github.com/6llm/NLG-Chatbot/wiki/" target="_blank">Wiki</a>  &#x754C;&#x9762;</p>
 <h2 id="&#x89E3;&#x51B3;&#x7684;&#x75DB;&#x70B9;">&#x89E3;&#x51B3;&#x7684;&#x75DB;&#x70B9;</h2>
@@ -381,23 +381,17 @@ Python 3.10.12</li>
 </ul>
 <pre><code>&#x63A5;&#x7740;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x73AF;&#x5883;&#xFF0C;&#x5E76;&#x5728;&#x865A;&#x62DF;&#x73AF;&#x5883;&#x5185;&#x5B89;&#x88C5;&#x9879;&#x76EE;&#x7684;&#x4F9D;&#x8D56;
 ```shell
-
 # &#x62C9;&#x53D6;&#x4ED3;&#x5E93;
 $ git clone https://github.com/6llm/NLG-Chatbot.git
-
 # &#x8FDB;&#x5165;&#x76EE;&#x5F55;
 $ cd NLG-Chatbot
-
 # &#x5B89;&#x88C5;&#x5168;&#x90E8;&#x4F9D;&#x8D56;
 </code></pre><pre><code> pip install -r requirements.txt
  pip install -r requirements_api.txt 
  pip install -r requirements_webui.txt
 </code></pre><pre><code>$ pip install -r requirements.txt  -i https://pypi.tuna.tsinghua.edu.cn/simple
-
 $ pip install -r requirements_api.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-
 $ pip install -r requirements_webui.txt   -i https://pypi.tuna.tsinghua.edu.cn/simple
-
 
 # &#x9ED8;&#x8BA4;&#x4F9D;&#x8D56;&#x5305;&#x62EC;&#x57FA;&#x672C;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#xFF08;FAISS&#x5411;&#x91CF;&#x5E93;&#xFF09;&#x3002;&#x5982;&#x679C;&#x8981;&#x4F7F;&#x7528; milvus/pg_vector &#x7B49;&#x5411;&#x91CF;&#x5E93;&#xFF0C;&#x8BF7;&#x5C06; requirements.txt &#x4E2D;&#x76F8;&#x5E94;&#x4F9D;&#x8D56;&#x53D6;&#x6D88;&#x6CE8;&#x91CA;&#x518D;&#x5B89;&#x88C5;&#x3002;
 </code></pre><h3 id="2&#xFF0C;-&#x6A21;&#x578B;&#x4E0B;&#x8F7D;">2&#xFF0C; &#x6A21;&#x578B;&#x4E0B;&#x8F7D;</h3>
@@ -429,11 +423,11 @@ $ python init_database.py --recreate-vs
 <li><p>Web UI &#x5BF9;&#x8BDD;&#x754C;&#x9762;&#xFF1A;</p>
 </li>
 </ol>
-<p><img src="img/LLM_success.png" alt="img"></p>
+<p><img src="img/LLM_success2.png" alt="img"></p>
 <ul>
 <li>Web UI &#x77E5;&#x8BC6;&#x5E93;&#x7BA1;&#x7406;&#x9875;&#x9762;&#xFF1A;</li>
 </ul>
-<p><img src="img/init_knowledge_base.jpg" alt=""></p>
+<p><img src="img/init_knowledge_base2.jpg" alt=""></p>
 <h3 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h3>
 <p>&#x4EE5;&#x4E0A;&#x65B9;&#x5F0F;&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x5FEB;&#x901F;&#x4E0A;&#x624B;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x66F4;&#x591A;&#x7684;&#x529F;&#x80FD;&#x548C;&#x81EA;&#x5B9A;&#x4E49;&#x542F;&#x52A8;&#x65B9;&#x5F0F; &#xFF0C;&#x8BF7;&#x53C2;&#x8003;<a href="https://github.com/6llm/NLG-Chatbot/wiki/" target="_blank">Wiki</a></p>
 <hr>
@@ -443,14 +437,14 @@ $ python init_database.py --recreate-vs
 <h3 id="telegram">Telegram</h3>
 <p><a href="https://t.me/+RjliQ3jnJ1YyN2E9" target="_blank"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&amp;logo=telegram&amp;logoColor=white" alt="Telegram" title="langchain-chatglm"></a></p>
 <h3 id="&#x9879;&#x76EE;&#x4EA4;&#x6D41;&#x7FA4;">&#x9879;&#x76EE;&#x4EA4;&#x6D41;&#x7FA4;</h3>
-<p><img src="img/qr_code_85.jpg" alt="&#x4E8C;&#x7EF4;&#x7801;" width="300"></p>
+<p><img src="img/qr_code_852.jpg" alt="&#x4E8C;&#x7EF4;&#x7801;" width="300"></p>
 <p>&#x1F389; NLG-Chatbot&#x9879;&#x76EE;&#x5FAE;&#x4FE1;&#x4EA4;&#x6D41;&#x7FA4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4E5F;&#x5BF9;&#x672C;&#x9879;&#x76EE;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x6B22;&#x8FCE;&#x52A0;&#x5165;&#x7FA4;&#x804A;&#x53C2;&#x4E0E;&#x8BA8;&#x8BBA;&#x4EA4;&#x6D41;&#x3002;</p>
 <h3 id="&#x516C;&#x4F17;&#x53F7;">&#x516C;&#x4F17;&#x53F7;</h3>
 <p><img src="img/official_wechat_mp_account.png" alt="&#x4E8C;&#x7EF4;&#x7801;" width="300"></p>
 <p>&#x1F389; NLG-Chatbot&#x9879;&#x76EE;&#x5B98;&#x65B9;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x6B22;&#x8FCE;&#x626B;&#x7801;&#x5173;&#x6CE8;&#x3002;
-<a href="https://docs.streamlit.io/library/api-reference/chat" target="_blank">https://docs.streamlit.io/library/api-reference/chat</a></p>
+<a href="https://docs.streamlit.io/library/api-2reference/chat" target="_blank">https://docs.streamlit.io/library/api-2reference/chat</a></p>
 <footer class="page-footer"><span class="copyright">&#xA9; snowdreams1006 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2024-05-17 21:54:46
+2024-05-17 22:03:02
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
 						
@@ -506,7 +500,7 @@ $ python init_database.py --recreate-vs
 	<script>
 		var gitbook = gitbook || [];
 		gitbook.push(function() {
-			gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"支持列表","level":"1.2","depth":1,"path":"llm/支持列表.md","ref":"./llm/支持列表.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["tbfed-pagefooter","lunr","search","search-pro","back-to-top-button","copy-code-button","cuav-chapters","heading-anchors","highlight","chapter-fold","expandable-chapters","theme-fexa","code","splitter","tbfed-pagefooter","popup","page-toc-button","accordion"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"splitter":{},"search-pro":{},"accordion":{},"search":{},"cuav-chapters":{"summaryMaxSize":20,"useLimitExpanded":false},"popup":{},"theme-fexa":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ReadMe.md","mtime":"2024-05-17T13:54:46.959Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-17T13:54:50.012Z"},"basePath":".","book":{"language":""}});
+			gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"支持列表","level":"1.2","depth":1,"path":"llm/支持列表.md","ref":"./llm/支持列表.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["tbfed-pagefooter","lunr","search","search-pro","back-to-top-button","copy-code-button","cuav-chapters","heading-anchors","highlight","chapter-fold","expandable-chapters","theme-fexa","code","splitter","tbfed-pagefooter","popup","page-toc-button","accordion"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"splitter":{},"search-pro":{},"accordion":{},"search":{},"cuav-chapters":{"summaryMaxSize":20,"useLimitExpanded":false},"popup":{},"theme-fexa":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ReadMe.md","mtime":"2024-05-17T14:03:02.262Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-17T14:03:12.511Z"},"basePath":".","book":{"language":""}});
 		});
 	</script>
 </div>
